@@ -1,0 +1,8 @@
+The files:
+
+  - index.css
+  - index.html
+  - index.js
+
+are the files that this project uses. All the other files are either old
+variatons of the `index.js` file, or it is this notes file.
