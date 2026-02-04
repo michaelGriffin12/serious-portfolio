@@ -34,8 +34,7 @@ drawAndReqNext() {
   /* This math adds up very fast :o */
   ratio = window.innerWidth / window.innerHeight;
 
-  /* Simple phone detector (please note that I have no regard for macbooks or
-   thinkpads) */
+  /* Simple phone detector */
   if (ratio > 1.5) {
     gcol = '20em 20em 20em';
     pmargin = '20em';
