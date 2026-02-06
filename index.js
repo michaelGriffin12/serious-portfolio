@@ -26,12 +26,13 @@ drawAndReqNext() {
   /* Calculate alpha for animation */
   leval = Math.abs(Math.sin((2 * Math.PI) * (frameCount * 0.001)));
 
+  /* Grab elements */
   bdhd = document.getElementById('bdh1');
   bdhd1 = document.getElementById('bdh2');
   contd = document.getElementById('cont0');
   contd1 = document.getElementById('cont1');
 
-  /* This math adds up very fast :o */
+  /* Aspect ratio math (used to detect phones) */
   ratio = window.innerWidth / window.innerHeight;
 
   /* Simple phone detector */
@@ -61,11 +62,12 @@ drawAndReqNext() {
    it.
   */
 
-  /* Takes little CPU time (but adds up) */
+  /* Used for breathing animation (the alpha is set, which is based on a sine
+   function using frameCount) */
   e1.style.background = 'radial-gradient(circle at 20% 50%, rgba(99, 2, 241, ' + leval + '), #0a0327)';
   e1.style.padding = '0.3em';
 
-  /* Also takes little CPU time (but adds up) */
+  /* Resets frame count after hitting a certain number (good practice) */
   if (frameCount >= 500) frameCount = 0;
   else frameCount++;
 
